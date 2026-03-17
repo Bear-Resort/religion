@@ -1,0 +1,130 @@
+{
+  "hash": "e9008a12",
+  "configHash": "8c5dab1b",
+  "lockfileHash": "26f8974a",
+  "browserHash": "91c53296",
+  "optimized": {
+    "@nanostores/react": {
+      "src": "../../node_modules/.pnpm/@nanostores+react@1.0.0_nanostores@1.1.0_react@19.2.3/node_modules/@nanostores/react/index.js",
+      "file": "@nanostores_react.js",
+      "fileHash": "da0cff4e",
+      "needsInterop": false
+    },
+    "@nanostores/router": {
+      "src": "../../node_modules/.pnpm/@nanostores+router@1.0.0_nanostores@1.1.0/node_modules/@nanostores/router/index.js",
+      "file": "@nanostores_router.js",
+      "fileHash": "f037994c",
+      "needsInterop": false
+    },
+    "@radix-ui/react-slot": {
+      "src": "../../node_modules/.pnpm/@radix-ui+react-slot@1.2.4_@types+react@19.2.7_react@19.2.3/node_modules/@radix-ui/react-slot/dist/index.mjs",
+      "file": "@radix-ui_react-slot.js",
+      "fileHash": "9093b1d8",
+      "needsInterop": false
+    },
+    "class-variance-authority": {
+      "src": "../../node_modules/.pnpm/class-variance-authority@0.7.1/node_modules/class-variance-authority/dist/index.mjs",
+      "file": "class-variance-authority.js",
+      "fileHash": "e9a54fe9",
+      "needsInterop": false
+    },
+    "js-cookie": {
+      "src": "../../node_modules/.pnpm/js-cookie@3.0.5/node_modules/js-cookie/dist/js.cookie.mjs",
+      "file": "js-cookie.js",
+      "fileHash": "2cbeacfa",
+      "needsInterop": false
+    },
+    "nanostores": {
+      "src": "../../node_modules/.pnpm/nanostores@1.1.0/node_modules/nanostores/index.js",
+      "file": "nanostores.js",
+      "fileHash": "eeb0215f",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/.pnpm/react-dom@19.2.3_react@19.2.3/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "eb7959e6",
+      "needsInterop": true
+    },
+    "react-markdown": {
+      "src": "../../node_modules/.pnpm/react-markdown@10.1.0_@types+react@19.2.7_react@19.2.3/node_modules/react-markdown/index.js",
+      "file": "react-markdown.js",
+      "fileHash": "995871ce",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/.pnpm/react@19.2.3/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "767a8ed8",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/.pnpm/react@19.2.3/node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "2c0b8e8b",
+      "needsInterop": true
+    },
+    "rehype-katex": {
+      "src": "../../node_modules/.pnpm/rehype-katex@7.0.1/node_modules/rehype-katex/index.js",
+      "file": "rehype-katex.js",
+      "fileHash": "00dcc140",
+      "needsInterop": false
+    },
+    "rehype-mathjax": {
+      "src": "../../node_modules/.pnpm/rehype-mathjax@7.1.0/node_modules/rehype-mathjax/svg.js",
+      "file": "rehype-mathjax.js",
+      "fileHash": "1c8f9a00",
+      "needsInterop": false
+    },
+    "remark-gfm": {
+      "src": "../../node_modules/.pnpm/remark-gfm@4.0.1/node_modules/remark-gfm/index.js",
+      "file": "remark-gfm.js",
+      "fileHash": "ccd76508",
+      "needsInterop": false
+    },
+    "remark-math": {
+      "src": "../../node_modules/.pnpm/remark-math@6.0.0/node_modules/remark-math/index.js",
+      "file": "remark-math.js",
+      "fileHash": "e6592a72",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-BoAXSpZd": {
+      "file": "chunk-BoAXSpZd.js",
+      "isDynamicEntry": false
+    },
+    "dev-BUswCgo5": {
+      "file": "dev-BUswCgo5.js",
+      "isDynamicEntry": false
+    },
+    "jsx-runtime-FpPp6L8T": {
+      "file": "jsx-runtime-FpPp6L8T.js",
+      "isDynamicEntry": false
+    },
+    "lib-BUMdiIiy": {
+      "file": "lib-BUMdiIiy.js",
+      "isDynamicEntry": false
+    },
+    "lib-C9cgwVLT": {
+      "file": "lib-C9cgwVLT.js",
+      "isDynamicEntry": false
+    },
+    "lib-Un-xbyVc": {
+      "file": "lib-Un-xbyVc.js",
+      "isDynamicEntry": false
+    },
+    "longest-streak-CqjJIiLk": {
+      "file": "longest-streak-CqjJIiLk.js",
+      "isDynamicEntry": false
+    },
+    "nanostores-BeIGPeTF": {
+      "file": "nanostores-BeIGPeTF.js",
+      "isDynamicEntry": false
+    },
+    "space-separated-tokens-C3jTTGZ7": {
+      "file": "space-separated-tokens-C3jTTGZ7.js",
+      "isDynamicEntry": false
+    }
+  }
+}
