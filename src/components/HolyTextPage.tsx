@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import { $router } from "../lib/router";
+import { openPage } from "@nanostores/router";
 import { holyChapters, type HolySection } from "../generated/holyTexts";
 
 type Props = {
@@ -82,7 +83,7 @@ export function HolyTextPage({ language }: Props) {
                 <button
                     type="button"
                     className="mb-4 text-sm text-blue-600 dark:text-blue-400 hover:underline"
-                    onClick={() => $router.open("home")}
+                    onClick={() => openPage($router, "home")}
                 >
                     {language === "en" ? "Back to Home" : "回到主页"}
                 </button>
