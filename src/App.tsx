@@ -192,13 +192,25 @@ function ChapterCard({ chapter, language }: ChapterCardProps) {
         };
     }, [chapter.sections, language]);
 
+    const englishSection0 = chapter.sections.find(
+        (s: HolySection) => s.section === 0 && s.language === "English",
+    );
+    const chineseSection0 = chapter.sections.find(
+        (s: HolySection) => s.section === 0 && s.language === "Chinese",
+    );
+
+    const displayTitle =
+        language === "en"
+            ? englishSection0?.title ?? chapter.title
+            : chineseSection0?.title ?? chapter.title;
+
     return (
         <div className="border border-gray-300 dark:border-gray-700 rounded-lg p-4">
             <div className="mb-2">
                 <h4 className="text-xl font-semibold">
                     {language === "en"
-                        ? `Chapter ${chapter.chapter}: ${chapter.title}`
-                        : `第 ${chapter.chapter} 章：${chapter.title}`}
+                        ? `Chapter ${chapter.chapter}: ${displayTitle}`
+                        : `第 ${chapter.chapter} 章：${displayTitle}`}
                 </h4>
                 <p className="text-sm text-gray-500">
                     {intro ?? chapter.category}
