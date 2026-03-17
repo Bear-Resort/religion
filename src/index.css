@@ -133,24 +133,7 @@
       to { opacity: 1; transform: translateY(0); }
 }
 
-/* MathJax layout: inline vs display */
-mjx-container.MathJax {
-  display: inline-block;
-  margin: 0 0.15em;
-}
-
-mjx-container.MathJax[display="true"],
-mjx-container.MathJax[display="block"] {
-  display: block !important;
-  margin: 1.5rem 0;
-  text-align: center;
-}
-
-mjx-container.MathJax[display="true"] > svg,
-mjx-container.MathJax[display="block"] > svg {
-  display: inline-block;
-  margin: 0 auto;
-}
+@import "katex/dist/katex.min.css";
 
 .fade-in { animation: fadeIn 0.8s ease-out forwards; }
   @keyframes fadeIn {

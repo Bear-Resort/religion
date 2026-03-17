@@ -3,7 +3,7 @@ import { useStore } from "@nanostores/react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
-import rehypeMathjax from "rehype-mathjax";
+import rehypeKatex from "rehype-katex";
 import { $router } from "../lib/router";
 import { holyChapters, type HolySection } from "../generated/holyTexts";
 
@@ -107,7 +107,7 @@ export function HolyTextPage({ language }: Props) {
                 {content && (
                     <ReactMarkdown
                         remarkPlugins={[remarkGfm, remarkMath]}
-                        rehypePlugins={[rehypeMathjax]}
+                        rehypePlugins={[rehypeKatex]}
                         components={{
                             h2: ({ node, ...props }) => (
                                 <h2
