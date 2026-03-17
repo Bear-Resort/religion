@@ -10,7 +10,8 @@
     "lint": "eslint --fix \"src/**/*.{js,ts,jsx,tsx}\"",
     "prettier": "prettier --write \"src/**/*.{js,ts,jsx,tsx}\" --config \".prettierrc.json\"",
     "preview": "vite preview",
-    "generate": "node scripts/generateHolyTexts.mjs"
+    "generate": "node scripts/generateHolyTexts.mjs",
+    "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
     "@nanostores/react": "^1.0.0",
