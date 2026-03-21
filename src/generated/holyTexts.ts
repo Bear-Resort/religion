@@ -42,22 +42,22 @@ export const holyChapters: HolyChapter[] = [
         "path": "构造.md"
       },
       {
-        "id": "Construction-of-time",
+        "id": "existence-of-the-world",
         "chapter": 1,
         "section": 1,
         "title": "Existence of the World",
         "category": "Foundations",
         "language": "English",
-        "path": "Construction-of-time.md"
+        "path": "existence-of-the-world.md"
       },
       {
-        "id": "Construction-of-space",
+        "id": "construction-of-the-space",
         "chapter": 1,
         "section": 2,
-        "title": "Construction of Space",
+        "title": "Construction of the Space",
         "category": "Foundations",
         "language": "English",
-        "path": "Construction-of-space.md"
+        "path": "construction-of-the-space.md"
       }
     ]
   }
