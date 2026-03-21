@@ -12,19 +12,6 @@ function App() {
     const page = useStore($router);
     const language = useStore($language);
 
-    const routeTitle = (route: string) => {
-        if (route === "algebra") {
-            return language === "en" ? "Algebra" : "代数";
-        }
-        if (route === "analysis") {
-            return language === "en" ? "Analysis" : "分析";
-        }
-        if (route === "characters") {
-            return language === "en" ? "Characters" : "性格";
-        }
-        return route;
-    };
-
     const homeTitle =
         language === "en" ? "Bear Resort: Religion" : "小熊樂園：宗教";
     const homeSubtitle =
