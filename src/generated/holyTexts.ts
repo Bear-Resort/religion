@@ -45,7 +45,7 @@ export const holyChapters: HolyChapter[] = [
         "id": "Construction-of-time",
         "chapter": 1,
         "section": 1,
-        "title": "Construction of Time",
+        "title": "Existence of the World",
         "category": "Foundations",
         "language": "English",
         "path": "Construction-of-time.md"
