@@ -142,16 +142,15 @@ export function HolyTextPage({ language }: Props) {
     }
 
     return (
-        <div className="flex flex-col items-center min-h-screen px-4 pt-24 pb-16 fade-in">
-            <div className="max-w-3xl w-full">
-                <button
-                    type="button"
-                    className="mb-4 text-sm link"
-                    onClick={() => openPage($router, "home")}
-                >
-                    {language === "en" ? "Back to Home" : "回到主页"}
-                </button>
-            </div>
+        <>
+            <button
+                type="button"
+                className="fixed top-[4.5rem] left-4 z-10 text-sm link px-1 rounded-sm bg-secondary/90"
+                onClick={() => openPage($router, "home")}
+            >
+                {language === "en" ? "Back to Home" : "回到主页"}
+            </button>
+            <div className="flex flex-col items-center min-h-screen px-4 pt-24 pb-16 fade-in">
             <div ref={proseRef} className="max-w-3xl w-full prose dark:prose-invert">
                 <h1 className="mb-4 text-3xl font-extrabold text-center">
                     {section.title}
@@ -178,6 +177,7 @@ export function HolyTextPage({ language }: Props) {
                 )}
             </div>
         </div>
+        </>
     );
 }
 

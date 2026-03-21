@@ -37,21 +37,6 @@ function App() {
             document.title = homeTitle;
             return;
         }
-
-        if (
-            page.route === "algebra" ||
-            page.route === "analysis" ||
-            page.route === "characters"
-        ) {
-            document.title = routeTitle(page.route);
-        } else if (page.route === "holyText") {
-            // Title is handled in HolyTextPage for specific section
-            if (!document.title) {
-                document.title = homeTitle;
-            }
-        } else {
-            document.title = homeTitle;
-        }
     }, [page, language, homeTitle]);
 
     if (page) {
