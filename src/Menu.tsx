@@ -54,7 +54,7 @@ function Menu() {
     };
 
     return (
-        <div className="absolute top-4 right-4 border-solid">
+        <div className="border-solid">
             <DropdownMenu>
                 <DropdownMenuTrigger>
                     {language === "en" ? "Menu" : "菜单"}

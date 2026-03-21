@@ -57,14 +57,14 @@ function Return() {
                 }
                 backToResort();
             }}
-            className="relative mt-4 ml-4 flex items-center gap-2 rounded-lg px-4 py-2 shadow-md transition-colors duration-200 hover:bg-gray-800 sm:absolute sm:top-4 sm:left-4 sm:mt-0 sm:ml-0"
+            className="flex items-center gap-2 rounded-lg px-4 py-2 shadow-md transition-colors duration-200 hover:bg-primary/90"
         >
             <img
                 src="https://bear-resort.github.io/logos/default-bear.gif"
                 alt="Bear Resort"
                 className="w-6 h-6 object-contain"
             />
-            {(!isNarrow || confirmOpen) && language === "en" ? "Back to Bear Resort" : "返回小熊樂園"}
+            {language === "en" ? "Back to Bear Resort" : "返回小熊樂園"}
         </Button>
     );
 }

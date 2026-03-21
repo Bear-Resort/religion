@@ -62,7 +62,7 @@ function App() {
         ) {
             return (
                 <>
-                    <div className="sticky top-0 z-10 bg-background/95 backdrop-blur border-b">
+                    <div className="sticky top-0 z-10 flex items-center justify-between bg-background/95 px-4 py-4 backdrop-blur sm:border-b">
                         <Return />
                         <Menu />
                     </div>
@@ -81,7 +81,7 @@ function App() {
         if (page.route === "holyText") {
             return (
                 <>
-                    <div className="sticky top-0 z-10 bg-background/95 backdrop-blur border-b">
+                    <div className="sticky top-0 z-10 flex items-center justify-between bg-background/95 px-4 py-4 backdrop-blur sm:border-b">
                         <Return />
                         <Menu />
                     </div>
@@ -93,7 +93,7 @@ function App() {
 
     return (
         <>
-            <div className="sticky top-0 z-10 bg-background/95 backdrop-blur border-b">
+            <div className="sticky top-0 z-10 flex items-center justify-between bg-background/95 px-4 py-4 backdrop-blur sm:border-b">
                 <Return />
                 <Menu />
             </div>
@@ -223,7 +223,7 @@ function ChapterCard({ chapter, language }: ChapterCardProps) {
                         <li key={section.id}>
                             <button
                                 type="button"
-                                className="text-blue-600 dark:text-blue-400 hover:underline"
+                                className="link"
                                 onClick={() =>
                                     openPage($router, "holyText", {
                                         id: section.id,
