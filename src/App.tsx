@@ -69,7 +69,7 @@ function App() {
                 <Return />
                 <Menu />
             </div>
-            <div className="flex flex-col justify-center items-center min-h-screen pt-24 fade-in px-4">
+            <div className="flex flex-col justify-center items-center py-24 fade-in px-4">
                 <div className="flex flex-col items-center mb-8">
                     <h1 className="text-3xl font-black text-center">
                         {homeTitle}
@@ -80,10 +80,10 @@ function App() {
                     </h2>
                 </div>
                 <div className="max-w-4xl w-full">
-                    <h3 className="text-2xl font-bold mb-4">
+                    <h3 className="text-2xl font-bold mb-4 text-center">
                         {language === "en"
                             ? "Holy Texts"
-                            : "圣典目录"}
+                            : "圣典"}
                     </h3>
                     <div className="space-y-6">
                         {holyChapters.map((chapter: HolyChapter) => (
