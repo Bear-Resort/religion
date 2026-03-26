@@ -127,9 +127,53 @@ export function HolyTextPage({ language }: Props) {
             setHtmlContent(null);
             return;
         }
+
+        const normalizeHtmlAssetUrls = (html: string): string => {
+            const wrap = document.createElement("div");
+            wrap.innerHTML = html;
+            const base = import.meta.env.BASE_URL;
+
+            wrap.querySelectorAll("img").forEach((img) => {
+                const src = img.getAttribute("src");
+                if (!src) return;
+                if (
+                    src.startsWith("http://") ||
+                    src.startsWith("https://") ||
+                    src.startsWith("//") ||
+                    src.startsWith("data:") ||
+                    src.startsWith("/")
+                ) {
+                    return;
+                }
+                img.setAttribute("src", `${base}${src}`);
+            });
+
+            wrap.querySelectorAll("img").forEach((img) => {
+                const parent = img.parentElement;
+                if (!parent || parent.tagName.toLowerCase() === "figure") return;
+
+                const figure = document.createElement("figure");
+                figure.className = "markdown-figure";
+
+                const cloned = img.cloneNode(true) as HTMLImageElement;
+                figure.appendChild(cloned);
+
+                const alt = img.getAttribute("alt");
+                if (alt && alt.trim()) {
+                    const caption = document.createElement("figcaption");
+                    caption.textContent = alt;
+                    figure.appendChild(caption);
+                }
+
+                parent.replaceChild(figure, img);
+            });
+
+            return wrap.innerHTML;
+        };
+
         markdownProcessor
             .process(content)
-            .then((v) => setHtmlContent(String(v)))
+            .then((v) => setHtmlContent(normalizeHtmlAssetUrls(String(v))))
             .catch(() => setError("Failed to process text."));
     }, [content]);
 
@@ -232,7 +276,7 @@ export function HolyTextPage({ language }: Props) {
                     {htmlContent && (
                         <div
                             ref={proseRef}
-                            className="prose-content max-w-3xl w-full prose dark:prose-invert [&_h2]:mt-6 [&_h2]:mb-3 [&_h2]:text-2xl [&_h2]:font-bold [&_p]:leading-relaxed [&_p]:my-4 [&_ul]:list-disc [&_ul]:list-outside [&_ul]:ml-6 [&_ul]:my-4 [&_ul]:space-y-1 [&_ol]:list-decimal [&_ol]:list-outside [&_ol]:ml-6 [&_ol]:my-4 [&_ol]:space-y-1 [&_li]:leading-relaxed"
+                            className="prose-content max-w-3xl w-full prose dark:prose-invert [&_h2]:mt-6 [&_h2]:mb-3 [&_h2]:text-2xl [&_h2]:font-bold [&_p]:leading-relaxed [&_p]:my-4 [&_ul]:list-disc [&_ul]:list-outside [&_ul]:ml-6 [&_ul]:my-4 [&_ul]:space-y-1 [&_ol]:list-decimal [&_ol]:list-outside [&_ol]:ml-6 [&_ol]:my-4 [&_ol]:space-y-1 [&_li]:leading-relaxed [&_figure]:my-6 [&_figure]:mx-auto [&_figure]:w-[67%] [&_figure>img]:w-full [&_figure>img]:h-auto [&_figcaption]:mt-2 [&_figcaption]:text-center [&_figcaption]:text-sm [&_figcaption]:text-muted-foreground"
                             dangerouslySetInnerHTML={{ __html: htmlContent }}
                         />
                     )}

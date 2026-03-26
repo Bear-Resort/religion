@@ -19,6 +19,8 @@ From $t_{\mathrm{glb}} = 0$, the God completed her construction of all dimension
 2. The next step is to construct the other two axes simultaneously, so that matters can scatter in three orthogonal direction.
 3. Although there are other orthogonal directions, the God prohibits matters to be distributed in the space, and she worked on locking these directions, while creating additional orders to the world.
 
+![The God creating the world.](img/crearing-world.png)
+
 ## Creation of First Axis of the Space
 
 ## Completion of Dimensions
